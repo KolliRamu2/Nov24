@@ -9,7 +9,7 @@
 
       - name: installing donet and unzip
         ansible.builtin.apt:
-          name: '{{item}}'
+          name: '{{ item }}'
           update_cache : yes
           state: present
           loop: "{{ package }}"
