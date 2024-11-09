@@ -67,7 +67,7 @@
       
 
       - name: Copying servicefile from ansible control node
-        ansible.builtin.template module:
+        ansible.builtin.template:
           src: nopCommerce.service.j2
           dest: '{{dest_service}}/{{service_name}}.service'
           notify: 
