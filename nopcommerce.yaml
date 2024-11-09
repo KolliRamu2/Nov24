@@ -72,8 +72,8 @@
         ansible.builtin.template:
           src: nopCommerce.service.j2
           dest: '{{dest_service}}/{{service_name}}.service'
-          notify: 
-            - Reload enable reload the service file
+        notify: 
+          - Reload enable reload the service file
 
       - name: The status of copying the file from ansible control to managed nodes
         ansible.builtin.debug:
