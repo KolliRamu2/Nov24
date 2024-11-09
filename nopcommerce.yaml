@@ -98,7 +98,7 @@
           state: reloaded
       - name: The status of application after changes in service file
         ansible.builtin.debug:
-        msg: the system is successfully reloaded.
+        msg: the system is successfully reloaded
         verbosity: 1
       
      
