@@ -5,7 +5,7 @@
       - name: Checking it running on Ubuntu OS
         ansible.builtin.fail:
           msg: This application runs on Ubuntu Distribution
-        when: ansible_facts['os_family'] != "Ubuntu"
+        when: ansible_facts['os_family'] !="Debian"
 
       - name: installing donet and unzip
         ansible.builtin.apt:
