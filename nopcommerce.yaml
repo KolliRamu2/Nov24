@@ -12,7 +12,7 @@
           name: '{{ item }}'
           update_cache : yes
           state: present
-          loop: "{{ package }}"
+        loop: "{{ package }}"
       - name: The status of package installation
         ansible.builtin.debug:
           msg: '{{item}} has successfully installed'
@@ -47,7 +47,7 @@
           path: '{{home_dir}}/{{item}}'
           owner : '{{username}}'
           state: directory
-          loop: '{{path}}'
+        loop: '{{path}}'
       - name: The status of  and unziping the file
         ansible.builtin.debug:
           msg: '{{item}} has successfully created at home directory'
