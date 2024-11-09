@@ -103,8 +103,36 @@
         ansible.builtin.debug:
           msg: the system is successfully reloaded.
           verbosity: 1
-      
-     
+# Playbook for Mysql
+ - name: Installing DB
+   become: yes
+   hosts: Db
+   roles:
+     - name: Installing Sql
+       role: geerlingguy.mysql
+        #creating root Users
+       mysql_root_home: /root
+       mysql_root_username: root
+       mysql_root_password: root
+       #data base details
+       mysql_port: "3306"
+       mysql_bind_address: '0.0.0.0'
+       mysql_datadir: /var/lib/mysql
+       # Creating data Bases
+       mysql_databases: 
+         - name: nopdb
+           encoding: utf8
+           collation: utf8_general_ci
+        # creating users
+       mysql_users:
+        - name: nop
+          host: "%"
+          password: nop  # Ensure this is secure in production!
+          priv: "nopdb.*:ALL"
+
+
+
+
       
 
 

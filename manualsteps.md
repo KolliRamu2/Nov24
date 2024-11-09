@@ -19,8 +19,8 @@
 * sudo mkdir bin  at home dir
 * sudo mkdir logs  at home dir
 
-* sudo mv /tmp/nopCommerce /var/lib/nopCommerce
-* sudo chown -R nop:nop /var/lib/nopCommerce
+* # sudo mv /tmp/nopCommerce /var/lib/nopCommerce
+* # sudo chown -R nop:nop /var/lib/nopCommerce
 
 * sudo chown nop:nop nopCommerce/
 * sudo vi  /usr/lib/systemd/system/nopCommerce.service for default .service
