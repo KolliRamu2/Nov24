@@ -81,7 +81,7 @@
         
       - name: Reload enable start the service file
         ansible.builtin.systemd_service:
-          name: {{service_name}}
+          name: '{{service_name}}'
           daemon_reload: yes
           enabled: yes
           state: started
@@ -94,7 +94,7 @@
    handlers:
       - name: Reload enable reload the service file
         ansible.builtin.systemd_service:
-          name: {{service_name}}
+          name: '{{service_name}}'
           state: reloaded
       - name: The status of application after changes in service file
         ansible.builtin.debug:
