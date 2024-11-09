@@ -36,6 +36,7 @@
         ansible.builtin.unarchive:
          src: '{{ZIP_FILE}}'
          dest: '{{home_dir}}'
+         owner: '{{username}}'
          remote_src: yes
       - name: The status of downloading and unziping the file
         ansible.builtin.debug:
@@ -81,7 +82,7 @@
           verbosity: 1
       
         
-      - name: Reload enable start the service file
+      - name: daemon-reload enable start the service file
         ansible.builtin.systemd_service:
           name: '{{service_name}}'
           daemon_reload: yes
