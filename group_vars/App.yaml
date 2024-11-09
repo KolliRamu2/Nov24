@@ -16,7 +16,7 @@ path:
 # variables for service file
 URL: http://0.0.0.0:5000
 # variables for template
-dest_service: /usr/lib/systemd/system/
+dest_service: /usr/lib/systemd/system
 service_name: nopCommerce
  
 
