@@ -57,7 +57,7 @@
       - name: copy the files from /tmp to home directory
         ansible.builtin.copy:
           src: '{{dest}}'
-          owner: {{username}}
+          owner: '{{username}}'
           dest: '{{home_dir}}'
           remote_src: yes
       - name: The status of copying the file in to home directory
