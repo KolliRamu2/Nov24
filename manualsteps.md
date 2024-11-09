@@ -6,12 +6,13 @@
 
 * sudo useradd -d /var/lib/nopCommerce -m -p nop -s /bin/sh nop
 
-*  mkdir /tmp/nopCommerce
+* # mkdir /tmp/nopCommerce
 
 
-* cd /tmp/nopCommerce
+* # cd /tmp/nopCommerce
 
-* sudo wget https://github.com/nopSolutions/nopCommerce/releases/download/release-4.70.5/nopCommerce_4.70.5_NoSource_linux_x64.zip
+
+* sudo wget -P /var/lib/nopCommerce https://github.com/nopSolutions/nopCommerce/releases/download/release-4.70.5/nopCommerce_4.70.5_NoSource_linux_x64.zip
 
 * sudo unzip nopCommerce_4.70.5_NoSource_linux_x64.zip
 

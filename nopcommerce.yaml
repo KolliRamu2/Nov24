@@ -32,10 +32,10 @@
           verbosity: 1
       
       
-      - name: Dowload and unzip the file
+      - name: Dowload and unzip the file in to home directory
         ansible.builtin.unarchive:
          src: '{{ZIP_FILE}}'
-         dest: '{{dest}}'
+         dest: '{{home_dir}}'
          remote_src: yes
       - name: The status of downloading and unziping the file
         ansible.builtin.debug:
@@ -56,16 +56,16 @@
         loop: '{{path}}'
       
 
-      - name: copy the files from /tmp to home directory
-        ansible.builtin.copy:
-          src: '{{dest}}'
-          owner: '{{username}}'
-          dest: '{{home_dir}}'
-          remote_src: yes
-      - name: The status of copying the file in to home directory
-        ansible.builtin.debug:
-          msg: 'the file has successfully copied in to {{home_dir}} home directory'
-          verbosity: 1
+      #- name: copy the files from /tmp to home directory
+      #  ansible.builtin.copy:
+      #    src: '{{dest}}'
+      #    owner: '{{username}}'
+      #    dest: '{{home_dir}}'
+      #    remote_src: yes
+      #- name: The status of copying the file in to home directory
+      #  ansible.builtin.debug:
+      #    msg: 'the file has successfully copied in to {{home_dir}} home directory'
+      #   verbosity: 1
       
 
       - name: Copying servicefile from ansible control node
