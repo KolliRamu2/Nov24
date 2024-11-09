@@ -9,7 +9,7 @@ shell : /bin/sh
 home_dir: /var/lib/nopCommerce
 # variables for Download and unzip the file
 ZIP_FILE: 'https://github.com/nopSolutions/nopCommerce/releases/download/release-4.70.5/nopCommerce_4.70.5_NoSource_linux_x64.zip'
-dest: /tmp/nopCommerce
+dest: /tmp
 # variables for folders
 path:
   - bin
