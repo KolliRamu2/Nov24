@@ -62,8 +62,8 @@
           remote_src: yes
       - name: The status of copying the file in to home directory
         ansible.builtin.debug:
-        msg: 'the file has successfully copied in to {{home_dir}} home directory'
-        verbosity: 1
+          msg: 'the file has successfully copied in to {{home_dir}} home directory'
+          verbosity: 1
       
 
       - name: Copying servicefile from ansible control node
@@ -75,8 +75,8 @@
 
       - name: The status of copying the file from ansible control to managed nodes
         ansible.builtin.debug:
-        msg: 'the file has successfully copied in to {{dest_service}} with service name{{service_name}}.service'
-        verbosity: 1
+          msg: 'the file has successfully copied in to {{dest_service}} with service name{{service_name}}.service'
+          verbosity: 1
       
         
       - name: Reload enable start the service file
@@ -87,8 +87,8 @@
           state: started
       - name: The status of application 
         ansible.builtin.debug:
-        msg: Service is running is successfully
-        verbosity: 1
+          msg: Service is running is successfully
+          verbosity: 1
       
 
    handlers:
@@ -98,8 +98,8 @@
           state: reloaded
       - name: The status of application after changes in service file
         ansible.builtin.debug:
-        msg: the system is successfully reloaded
-        verbosity: 1
+          msg: the system is successfully reloaded.
+          verbosity: 1
       
      
       
