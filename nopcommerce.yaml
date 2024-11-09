@@ -1,6 +1,6 @@
  - name: nopCommerce
    become: yes
-   host: App
+   host: APP
    tasks:
       - name: Checking it running on Ubuntu OS
         ansible.builtin.fail:
